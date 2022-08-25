@@ -8,6 +8,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package.json ./
 COPY yarn.lock ./
+COPY .env.production ./
 
 RUN yarn
 # If you are building your code for production
@@ -18,6 +19,7 @@ COPY . .
 
 FROM base as production
 ENV NODE_PATH=./build
+ENV NODE_ENV=production
 
 RUN yarn build
 
