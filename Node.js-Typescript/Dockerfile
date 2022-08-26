@@ -18,9 +18,12 @@ RUN yarn
 COPY . .
 
 FROM base as production
+
+ARG content
+
 ENV NODE_PATH=./build
 ENV NODE_ENV=production
-
+ENV BUILD_ARG=$content
 RUN yarn build
 
 EXPOSE 8080

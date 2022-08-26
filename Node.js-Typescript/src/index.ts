@@ -7,7 +7,7 @@ const HOST = "0.0.0.0";
 
 const app = express();
 app.get("/", (req, res) => {
-  res.send(`Hello World: ${process.env.MESSAGE || ""}`);
+  res.send(`Hello World: ${process.env.MESSAGE || ""} - This is from build: ${process.env.BUILD_ARG}`);
 });
 
 app.listen(PORT, HOST);
