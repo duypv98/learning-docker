@@ -1,3 +1,5 @@
 node_modules
 npm-debug.log
 yarn-error.log
+# if not using volume, add comment to next line 
+data

@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  node-ts:
+    build: .
+    image: duypv98/nodets:latest
+    volumes:
+      - ./data:/usr/src/app/data
+    ports:
+      - 4001:8080
+    restart: always
